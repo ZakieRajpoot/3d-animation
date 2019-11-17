@@ -1,0 +1,260 @@
+*{
+	margin:0 auto;
+}
+#container{
+	background-image:linear-gradient(to bottom left, silver, white);
+	width:100%;
+	height:100vh;
+	position:relative;
+}
+.mumbai img{
+	width:100%;
+	height:500px;
+	position:relative;
+	
+}
+.road img{
+	width:100%;
+	height:80px;
+	position:relative;
+	
+}
+#landing-plane{
+	position:absolute;
+	z-index:1;
+	top:300px;
+	animation:landing 10s infinite linear;
+}
+.plan-body img{
+	width:200px;
+	height:50px;
+	
+}
+@keyframes landing{
+	0%{
+		top:300px;
+		left:1130px;
+		transform:scale(.3);
+	}
+	20%{
+		top:350px;
+		left:1000px;
+		transform:scale(.5);
+	}
+	30%{
+		top:400px;
+		left:900px;
+		transform:scale(.7);
+		
+	}
+	40%{
+		top:450px;
+		left:800px;
+		transform:scale(.8);
+	}	
+	
+	50%{
+		top:500px;
+		left:700px;
+		transform:scale(.9) rotate(8deg);
+		transform-origin:right center;
+	}
+	60%{
+		top:500px;
+		left:600px;
+		transform:scale(.9) rotate(6deg);
+		transform-origin:right center;
+	}
+	70%{
+		top:500px;
+		left:500px;
+		transform:scale(1) rotate(1deg);
+	}
+	100%{
+		top:500px;
+		left:-500px;
+		transform:scale(1) rotate(-1deg);
+		transform-origin:right center;
+	}
+}
+                                               /* tyre section */
+.tair{
+	position:absolute;
+}
+.tair img{
+	width:22px;
+	animation:rotate 1s infinite linear;
+	position:relative;
+	
+}
+.tair1{
+	left:110px;
+	top:37px
+}
+.tair2{
+	left:15px;
+	top:37px
+}											   
+@keyframes rotate
+{
+	100%{transform:rotate(-360deg);}
+	
+}	
+	                                             /* left straight plan */
+#left-plane{
+	position:absolute;
+	z-index:1;
+	animation:left-straight 10s infinite linear;
+	display:inline-block;
+}
+.left-plane-body img{
+	position:relative;
+	width:200px;
+	height:50px;
+	top:-580px;
+}											 
+@keyframes left-straight{
+	100%{transform:translatex(1050px);}
+    
+}
+                                   /* left missile */
+#left-plane-missile{
+	position:absolute;
+	z-index:1;
+	animation:left-missile 10s infinite linear;
+	display:inline-block;
+	bottom:550px;
+}								   
+.left-missile-body img{
+	position:relative;
+	width:100px;
+	height:30px;
+	
+}
+@keyframes left-missile{
+	0%{
+		left:-10px;
+		top:20px;
+		transform:scale(.2);
+		
+	}
+	20%{
+		left:70px;
+		top:90px;
+		transform:scale(.3);
+		
+	}
+	30%{
+		left:150px;
+		top:120px;
+		transform:scale(.4);
+		
+	}
+	40%{
+		left:200px;
+		top:150px;
+		transform:scale(.5) rotate(5deg);
+		
+	}
+	50%{
+		left:350px;
+		top:200px;
+		transform:scale(.6) rotate(15deg);
+		transform-origin:right center;
+	}
+	60%{
+		left:500px;
+		top:250px;
+		transform:scale(.7) rotate(25deg);
+		transform-origin:right center;
+	}
+	70%{
+		left:600px;
+		top:300px;
+		transform:scale(.8) rotate(30deg);
+		transform-origin:right center;
+	}
+	80%{
+		left:700px;
+		top:350px;
+		transform:scale(.9) rotate(30deg);
+		transform-origin:right center;
+	}
+	100%{
+		left:800px;
+		top:440px;
+		transform:scale(1) rotate(35deg);
+		transform-origin:right center;
+	}
+}
+}
+            /* blast */
+.blast{
+	
+	width:150px;
+	height:90px;
+	
+}
+.blast-img img{
+	width:100px;
+	height:70px;
+	position:relative;
+	top:-160px;
+	left:830px;
+	animation-name:blast;
+	animation-duration:2s;
+	animation-delay:10s;
+	animation-fill-mode:infinite;
+	opacity:0;
+	transition-property:all;
+}
+@keyframes blast{
+    from{right:-300px; }
+    to{right:0px;opacity:1;}	
+}			
+                                               /* right plan */
+#right-plane{
+	position:absolute;
+	z-index:1;
+	animation:right-straight 10s infinite linear;
+	display:inline-block;
+	
+}											   
+.right-plane-body img{
+	position:relative;
+	width:200px;
+	height:50px;
+	top:-600px;
+	left:1080px;
+}
+@keyframes right-straight{
+	100%{transform:translatex(-1200px);}
+}
+#right-plane-missile{
+	position:absolute;
+	z-index:1;
+	animation:right-missile 10s infinite linear;
+	display:inline-block;
+	bottom:500px;
+	left:1150px;
+}	
+.right-missile-body img{
+	position:relative;
+	width:90px;
+	height:35px;
+	
+}
+@keyframes right-missile{
+	0%{
+		right:0px;
+		top:80px;
+		transform:scale(.1,.5);
+	}
+	100%{
+		right:200px;
+		top:300px;
+		transform:scale(.5,1);
+	}
+	
+	
+}									   
